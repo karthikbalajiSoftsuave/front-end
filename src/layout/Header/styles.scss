@@ -1,0 +1,80 @@
+
+.header {
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    pointer-events: auto;
+    transition: padding 140ms ease-in-out;
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .25s ease;
+    &.active{
+        background: #be9788;
+    }
+
+    .header-container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex: 1 0 67%;
+        align-items: center;
+
+        .logo-container {
+            flex-grow: 0;
+            flex-shrink: 0;
+            backface-visibility: hidden;
+
+            a {
+                text-decoration: none;
+                backface-visibility: hidden;
+                color: #fff;
+
+                img {
+                    width: auto;
+                    max-width: 100%;
+                    max-height: 100px;
+                    border: 0;
+                }
+            }
+        }
+
+        .nav-bar-container {
+            text-align: right;
+            margin-left: auto;
+            padding-left: 2vw;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            .nav-links {
+                padding-left: 1.2vw;
+
+                a {
+                    text-decoration: none;
+                    backface-visibility: hidden;
+                    color: #fff;
+                    font-family: "garment";
+                    font-size: calc(1.2 * 1rem);
+                }
+                a.active{
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        .social-media-share {
+            display: flex;
+            margin: 0;
+            .icon{
+                margin-left: 1.8vw;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
